@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --primary: 335 90% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 335 30% 90%;
+    --secondary-foreground: 335 50% 25%;
+    --accent: 335 60% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --ring: 335 50% 40%;
+    --radius: 0.5rem;
+    
+    /* Custom color theme */
+    --softPink: 340 85% 55%;
+    --champagneGold: 325 65% 45%;
+    --sparkleGold: 335 85% 40%;
+    --softWhite: 0 0% 98%;
+    --charcoal: 340 30% 15%;
+  }
+  
+  .dark {
+    --background: 335 20% 10%;
+    --foreground: 0 0% 98%;
+    --muted: 335 15% 20%;
+    --muted-foreground: 335 5% 80%;
+    --popover: 335 20% 10%;
+    --popover-foreground: 0 0% 98%;
+    --card: 335 20% 10%;
+    --card-foreground: 0 0% 98%;
+    --border: 335 20% 20%;
+    --input: 335 20% 20%;
+    --primary: 335 90% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 335 30% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 335 50% 50%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --ring: 335 50% 50%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Custom theme colors */
+.text-softPink {
+  color: hsl(var(--softPink));
+}
+
+.text-champagneGold {
+  color: hsl(var(--champagneGold));
+}
+
+.text-sparkleGold {
+  color: hsl(var(--sparkleGold));
+}
+
+.text-charcoal {
+  color: hsl(var(--charcoal));
+}
+
+.bg-softPink {
+  background-color: hsl(var(--softPink));
+}
+
+.bg-champagneGold {
+  background-color: hsl(var(--champagneGold));
+}
+
+.bg-sparkleGold {
+  background-color: hsl(var(--sparkleGold));
+}
+
+.bg-softWhite {
+  background-color: hsl(var(--softWhite));
+}
+
+.border-champagneGold {
+  border-color: hsl(var(--champagneGold));
+}
+
+/* Font families */
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-dancing {
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Animations */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(219, 48, 122, 0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(219, 48, 122, 0.25);
+}
+
+.glass-card {
+  background: rgba(219, 48, 122, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(219, 48, 122, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(219, 48, 122, 0.15);
+}
+
+/* Neumorphism */
+.neumorphic {
+  background: #ff6b9d;
+  box-shadow: 8px 8px 16px #db307a, -8px -8px 16px #ffb6c1;
+}
